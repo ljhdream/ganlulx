@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支教风采展示平台</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- 背景图片轮播 -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="background1.jpg" class="bg-image">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="background2.jpg" class="bg-image">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="background3.jpg" class="bg-image">
+        </div>
+
+        <!-- 轮播指示点 -->
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>支教风采展示平台</h1>
+
+        <!-- 静态展示已上传的文件 -->
+        <div id="fileDisplay">
+            <div class="file-item">
+                <div class="file-info">
+                    <span class="file-type">🖼️</span>
+                    <span class="file-title">支教照片</span>
+                    <span class="file-school">某某小学</span>
+                </div>
+                <div class="file-actions">
+                    <a class="file-download" href="example_photo.jpg" download>下载</a>
+                </div>
+            </div>
+
+            <div class="file-item">
+                <div class="file-info">
+                    <span class="file-type">🎥</span>
+                    <span class="file-title">支教视频</span>
+                    <span class="file-school">另一个小学</span>
+                </div>
+                <div class="file-actions">
+                    <a class="file-download" href="example_video.mp4" download>下载</a>
+                </div>
+            </div>
+
+            <div class="file-item">
+                <div class="file-info">
+                    <span class="file-type">🎵</span>
+                    <span class="file-title">支教音频</span>
+                    <span class="file-school">某地小学</span>
+                </div>
+                <div class="file-actions">
+                    <a class="file-download" href="example_audio.mp3" download>下载</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 文件上传表单 -->
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="fileTitle">标题：</label>
+            <input type="text" id="fileTitle" name="fileTitle" required>
+            <br><br>
+            <label for="fileSchool">所属小学：</label>
+            <input type="text" id="fileSchool" name="fileSchool" required>
+            <br><br>
+            <label for="fileType">选择文件：</label>
+            <input type="file" id="fileType" name="fileType" accept="image/*, video/*, audio/*" required>
+            <br><br>
+            <button type="submit">上传文件</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
